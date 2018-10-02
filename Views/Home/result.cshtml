@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="~/css/result.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>All Quote</title>
+</head>
+<body>
+    <div id="container">
+        <h1>All Quote</h1>
+    @foreach(var item in @ViewBag.AllQuote){
+        <div>
+        <p>"@item["quote"]"</p>
+        <span>-"@item["name"]" at @item["created_at"].ToString("HH:mm tt dd MMM yyyy")</span>
+        <hr>
+        </div>
+    }
+    <a href="/"><button>Back</button></a>
+    </div>
+</body>
+</html>
